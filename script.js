@@ -41,5 +41,5 @@ const currentSize = parseFloat(window.getComputedStyle(document.querySelector('.
   yesbutton.style.fontSize = `${currentSize * 3.5}px`;}
 
 function handleYesClick() 
-    {window.location.href= "yes_page.html";}
+    {window.location.href= "yes_home.html";}
 
