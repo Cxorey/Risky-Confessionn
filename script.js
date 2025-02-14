@@ -13,19 +13,16 @@ const messages = [
 
 let messageindex = 0;
 let noClickCount = 0;
-const maxNoClicks = 5; 
+const maxNoClicks = 7; 
 
 function handleNoClick() {
     const noButton = document.querySelector('.no-button');
     const yesbutton = document.querySelector('.yes-button');
     noButton.textContent = messages[messageindex];
     noClickCount++;
-
+    noButton.style.transition = "left 0.3s ease-in-out, top 0.3s ease-in-out";
     
-    if (noClickCount >= maxNoClicks) {
-        noButton.style.display = "none";
-        return; 
-    }
+
 messageindex = (messageindex + 1) % messages.length;
 const maxX = window.innerWidth - noButton.clientWidth;
     const maxY = window.innerHeight - noButton.clientHeight;
@@ -42,4 +39,15 @@ const currentSize = parseFloat(window.getComputedStyle(document.querySelector('.
 
 function handleYesClick() 
     {window.location.href= "yes_home.html";}
-
+    function createLoveEffect(element) {
+        const love = document.createElement('div');
+        love.classList.add('love');
+        love.textContent = "❤️";
+        document.body.appendChild(love);
+    
+        // Posisi love muncul di sekitar tombol "No"
+        const rect = element.getBoundingClientRect();
+        love.style.left = `${rect.left + rect.width / 2}px`;
+        love.style.top = `${rect.top}px`;
+    }
+    createLoveEffect(noButton);

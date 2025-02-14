@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #ea00ff;
+    background-color: #7c3383;
     font-family: 'Helvetica', sans-serif;
 }
 
@@ -14,7 +14,7 @@ body {
 
 .header_text {
     font-size: 3em;
-    color: #2fd394;
+    color: #ececec;
 }
 
 .gif_container img {
